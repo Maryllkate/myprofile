@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+/* navbar */
+.navbar-container,
+.content-container {
+    background-color: #9AC5F4;
+}
+
+
+.navbar-selection {
+    background-color: #FBFFDC;
+    border: solid 2px #176B87;
+    border-radius: 50px;
+    width: 55%;
+}
+
+.navbar-text > li > a {
+    
+    font-weight: bold;
+    font-size: 26px;
+    text-decoration: none;
+
+}
+
+/* main - content */
+
+
+.introduction {
+    width: 60vw;
+}
+
+.introduction > h1 {
+    color: #050A30;
+    font-weight: bold;
+    margin: 5% 5% 2% 5%;
+}
+
+.introduction > h1 > span {
+    color: #176B87;
+    font-weight: bold;
+}
+
+.introduction > .border-round > h1 {
+    color: #050A30;
+    display: inline-block;
+    background-color: #FFEADD;
+    border-radius: 65px;
+    font-weight: bold;
+    font-size: 55px;
+    margin-left: 5%;
+    padding: 10px;
+}
+
+.introduction > .border-round > h1 > span {
+    color: #FB4570;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
+
+.about-me-intro {
+    color: #050A30;
+    font-family: 'EB Garamond', serif;
+    font-size: 45px;
+}
+
+.more-on-me { 
+    color: #050A30;
+    background-color: #FFEADD;
+    border-radius: 35px;
+    border: none;
+    font-weight: bold;
+    font-size: 26px;
+    padding: 12px;
+    position: absolute;
+    width: 15%;
+}
+
+.more-on-me:hover {
+    color: #ffffff;
+    background-color:#050A30;
+}
+
+/* media responsiveness */
+
+@media screen and (max-width: 550px) {
+    .introduction {
+        align-items: center;
+    }
+
+}
