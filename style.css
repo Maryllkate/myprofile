@@ -8,7 +8,6 @@
     background-color: #9AC5F4;
 }
 
-
 .navbar-selection {
     background-color: #FBFFDC;
     border: solid 2px #176B87;
@@ -34,7 +33,7 @@
 .introduction > h1 {
     color: #050A30;
     font-weight: bold;
-    margin: 5% 5% 2% 5%;
+    margin: 2% 5% 2% 5%;
 }
 
 .introduction > h1 > span {
@@ -71,7 +70,6 @@
     background-color: #FFEADD;
     border-radius: 35px;
     border: none;
-    font-weight: bold;
     font-size: 26px;
     padding: 12px;
     position: absolute;
@@ -83,9 +81,36 @@
     background-color:#050A30;
 }
 
+/* what i do section */
+
+.line > h1 {
+    
+    color: #050A30;
+    font-size: 56px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #7EC8E3;
+}
+
+.line::after {
+    background-color: #050A30;
+    content:"";
+    display: block;
+    width: auto;
+    height: 5px;
+    
+}
+
+.img-fluid {
+    width: 350px;
+    height: 350px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #7EC8E3;
+}
+
 /* media responsiveness */
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 990px) {
     .introduction {
         align-items: center;
     }
