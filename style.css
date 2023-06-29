@@ -2,9 +2,14 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* navbar */
 .navbar-container,
-.content-container {
+.content-container,
+.bg-section-tools {
     background-color: #9AC5F4;
 }
 
@@ -24,7 +29,6 @@
 }
 
 /* main - content */
-
 
 .introduction {
     width: 60vw;
@@ -108,11 +112,207 @@
     -webkit-text-stroke-color: #7EC8E3;
 }
 
+/* tools */
+
+.carousel-image {
+    height: 330px;
+    width: 350px;
+}
+
+/* projects */
+
+section.projects .container .gallery-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "box1 box2 box2"
+    "box1 box3 box3";
+}
+
+.section.projects .container a:first-child {
+    grid-area: box1;
+    padding: 1rem;
+}
+
+.section.projects .container a:nth-child(2) {
+    grid-area: box2;
+    padding: 1rem;
+}
+
+.section.projects .container a:last-child{
+    grid-area: box3;
+    padding: 1rem;
+}
+
+.gallery-container {
+    position: relative;
+}
+
+.gallery-container .img-text {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 252, 252, 0.6);
+    transition: all .3s ease-in-out;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.gallery-container .img-text:hover {
+    opacity: 2;
+}
+
+/* contact form */
+
+.wrapper > header {
+    border-bottom: 1px solid #bfbfbf;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 30px;  
+}
+
+.wrapper form {
+    margin: 35px 30px;
+}
+
+form .dbl-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+
+.dbl-field .field {
+    height: 50px;
+    position: relative;
+    width: calc(100% / 2 - 13px);
+}
+
+form .field input, 
+form .message textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 18px 0 46px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+
+form .field input::placeholder,
+form .message textarea::placeholder {
+    color: #bfbfbf;
+}
+
+form .field input:focus, 
+form .message textarea:focus {
+    border: 2px solid #0D6EFD;
+}
+
+.wrapper form i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: #bfbfbf;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+form .field input:focus ~ i,
+form .message textarea:focus ~ i {
+    color: #0D6EFD;
+}
+
+form .message{
+    position: relative;
+}
+
+form .message i{
+    top: 30px;
+    font-size: 20px;
+}
+
+form .message textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 120px;
+    max-height: 300px;
+    padding: 15px 20px 0 48px;
+}
+
+form .button-area{
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+}
+
+.button-area button{
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #0D6EFD;
+    padding: 13px 25px;
+}
+
+.button-area span{
+    color: #0D6EFD;
+    margin-left: 30px;
+}
+
+/* social media */
+
+i {
+    font-style: normal;
+    font-weight: bold;
+}
+
 /* media responsiveness */
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 550px) {
     .introduction {
         align-items: center;
     }
 
+}
+
+@media(max-width: 600px){
+    .wrapper header{
+        text-align: center;
+    }
+
+    form .dbl-field{
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+
+    .dbl-field .field{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    form .button-area{
+        resize: none;
+    }
+
+    form .button-area{
+        flex-direction: column;
+    }
+
+    .button-area button{
+        width: 100%;
+    }
+
+    .button-area span{
+        text-align: center;
+        margin: 20px 0;
+    }
 }
